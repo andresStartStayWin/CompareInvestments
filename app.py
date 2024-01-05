@@ -96,7 +96,7 @@ def mostrar_resultados():
     df_formateado = formatear_columnas(df.copy())
     df_ordenado = ordenar_por_rentabilidad(df_formateado)
 
-    return render_template('resultado.html', df=df_ordenado.to_html(classes='dataframe', index=False))
+    return render_template('index.html', df=df_ordenado.to_html(classes='dataframe', index=False))
 
 if __name__ == '__main__':
         app.run(debug=True)
