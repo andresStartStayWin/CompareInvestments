@@ -62,3 +62,44 @@ p {
     overflow: hidden;
     padding-bottom: 20px;
 }
+
+/* Estilo para el formulario */
+form {
+    background-color: white;
+    padding: 15px;
+    margin: 10px auto;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para los elementos del formulario */
+form label, form input, form button {
+    display: block;
+    width: 100%;
+    margin: 5px auto;
+}
+
+form label {
+    margin-bottom: 3px;
+    color: #555;
+}
+
+form input {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Estilo para el botón de enviar */
+form input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
