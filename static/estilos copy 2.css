@@ -1,0 +1,148 @@
+/*===== GOOGLE FONTS =====*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/*===== VARIABLES CSS =====*/
+:root {
+    --font-family: 'Poppins', sans-serif;
+    --main-bg-color: #f4f4f4;
+    --text-color: hsl(224, 56%, 12%);
+    --primary-color: hsl(224, 89%, 60%);
+    --secondary-color: #007bff;
+    --table-border-color: #ddd;
+    --button-hover-bg-color: #0056b3;
+    --border-radius: 0.5rem;
+    --default-padding: 15px;
+    --font-size-normal: .938rem;
+}
+
+/*===== BASE =====*/
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--main-bg-color);
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+}
+
+h1, h2, p {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Estilos Específicos */
+
+/* Estilo para la tabla */
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+table, th, td {
+    border: 1px solid var(--table-border-color);
+}
+
+th, td {
+    padding: var(--default-padding);
+    text-align: center;
+}
+
+/* Estilo para el encabezado de la tabla */
+th {
+    background-color: var(--secondary-color);
+    color: white;
+    text-transform: uppercase;
+}
+
+/* Estilo para el título y subtítulo */
+h1, h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+h1 {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+/* Estilo para el párrafo */
+p {
+    text-align: center;
+    color: var(--text-color);
+}
+
+/* Estilo adicional para .container */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+/* Estilo para el formulario */
+form {
+    background-color: white;
+    padding: var(--default-padding);
+    margin: 10px auto;
+    width: 60%;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para los elementos del formulario */
+form label, form input, form button {
+    display: block;
+    width: 100%;
+    margin: 5px auto;
+}
+
+form label {
+    margin-bottom: 3px;
+    color: #555;
+}
+
+form input {
+    padding: 5px;
+    border: 1px solid var(--table-border-color);
+    border-radius: 4px;
+}
+
+/* Estilo para el botón de enviar */
+form input[type="submit"] {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: var(--button-hover-bg-color);
+}

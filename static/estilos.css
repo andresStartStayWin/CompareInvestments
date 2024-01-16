@@ -1,34 +1,90 @@
-/* Estilo general del cuerpo */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    color: #333;
+/*===== GOOGLE FONTS =====*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/*===== VARIABLES CSS =====*/
+:root {
+    --font-family: 'Poppins', sans-serif;
+    --main-bg-color: #f4f4f4;
+    --text-color: hsl(224, 56%, 12%);
+    --primary-color: hsl(224, 89%, 60%);
+    --secondary-color: hsl(224, 56%, 35%);
+    --border-color: #e0e0e0;
+    --button-hover-bg-color: #0056b3;
+    --border-radius: 10px;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --font-size-normal: .938rem;
+    --font-size-large: 2rem;
+    --font-size-medium: 1.25rem;
+    --spacing-small: 10px;
+    --spacing-medium: 20px;
+    --spacing-large: 30px;
 }
 
-/* Estilo para la tabla */
+/*===== BASE =====*/
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--main-bg-color);
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    font-size: var(--font-size-normal);
+}
+
+h1, h2, p {
+    margin: var(--spacing-medium) 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Estilos Específicos */
+
+/* Estilo para la tabla con sombra más prominente */
 table {
     border-collapse: separate;
     border-spacing: 0;
-    margin: 20px auto;
+    margin: var(--spacing-large) auto;
     width: 80%;
-    border-radius: 15px;
-    overflow: hidden; /* Asegura que los bordes redondeados se apliquen en la tabla */
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra más prominente para efecto 3D */
 }
 
+
 table, th, td {
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
 }
 
 th, td {
-    padding: 15px;
+    padding: var(--spacing-small);
     text-align: center;
 }
 
 /* Estilo para el encabezado de la tabla */
 th {
-    background-color: #007bff;
+    background-color: var(--primary-color);
     color: white;
     text-transform: uppercase;
 }
@@ -36,41 +92,40 @@ th {
 /* Estilo para el título y subtítulo */
 h1, h2 {
     text-align: center;
-    margin-top: 20px;
 }
 
 h1 {
-    color: #007bff;
-    margin-bottom: 10px;
+    color: var(--primary-color);
+    font-size: var(--font-size-large);
 }
 
 h2 {
-    color: #2a28a7;
-    margin-bottom: 5px;
+    color: var(--secondary-color);
+    font-size: var(--font-size-medium);
 }
 
-/* Estilo para el párrafo de mejor rendimiento */
+/* Estilo para el párrafo */
 p {
     text-align: center;
-    color: #333;
+    color: var(--text-color);
 }
 
-/* Estilo adicional para mejorar la apariencia */
+/* Estilo adicional para .container */
 .container {
     width: 80%;
     margin: auto;
     overflow: hidden;
-    padding-bottom: 20px;
+    padding-bottom: var(--spacing-large);
 }
 
 /* Estilo para el formulario */
 form {
     background-color: white;
-    padding: 15px;
-    margin: 10px auto;
+    padding: var(--spacing-medium);
+    margin: var(--spacing-medium) auto;
     width: 60%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
 }
 
 /* Estilo para los elementos del formulario */
@@ -82,24 +137,69 @@ form label, form input, form button {
 
 form label {
     margin-bottom: 3px;
-    color: #555;
+    color: var(--secondary-color);
 }
 
 form input {
-    padding: 5px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    padding: var(--spacing-small);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
 }
 
 /* Estilo para el botón de enviar */
 form input[type="submit"] {
-    background-color: #007bff;
+    background-color: var(--primary-color);
     color: white;
     border: none;
     cursor: pointer;
+    padding: var(--spacing-medium);
+    border-radius: var(--border-radius);
     transition: background-color 0.3s;
-}
-
-form input[type="submit"]:hover {
-    background-color: #0056b3;
+    }
+    
+    form input[type="submit"]:hover {
+    background-color: var(--button-hover-bg-color);
+    }
+    
+    /* Mejoras Visuales y Responsividad */
+    .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-medium);
+    }
+    
+    .section {
+    padding: var(--spacing-large) 0;
+    }
+    
+    /* Ajustes para botones y enlaces */
+    .button, a.button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--spacing-small) var(--spacing-large);
+    text-align: center;
+    border-radius: var(--border-radius);
+    display: inline-block;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    }
+    
+    .button:hover, a.button:hover {
+    background-color: var(--button-hover-bg-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Responsividad */
+    @media screen and (max-width: 768px) {
+    .container {
+    width: 95%;
+    padding: var(--spacing-small);
+    }
+    table {
+        width: 100%;
+    }
+    
+    form {
+        width: 100%;
+    }
 }
